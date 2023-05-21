@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: ${(props) => props.backgroundColor};
     color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+    border: 1px solid ${(props) => props.borderColor};
     padding: 1rem 3rem;
-    
+    font-size: ${(props) => props.fontSize};
 `;
 
 export default StyledButton;

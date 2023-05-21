@@ -1,17 +1,16 @@
 import Header from "./Componentes/Encabezado";
 import Footer from "./Componentes/Rodapie";
 import Banner from "./Componentes/Banner";
-
-
-
-
+import Cuerpo from "./Global";
+import Carrusel from "./Componentes/Carousel/Carrusel";
 function App() {
   return (
-    <div>
+    <Cuerpo>
       <Header/>
-      <Banner/>   
+      <Banner/> 
+      <Carrusel/>
       <Footer/>
-    </div>
+    </Cuerpo>
   );
 }
 

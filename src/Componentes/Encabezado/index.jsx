@@ -14,7 +14,9 @@ const StyledHeader = styled.header`
 const Header = () => {
     return <StyledHeader>
         <a href="index.html"><img src="./Logo.png" alt="Logo Aluraflix"/></a>
-        <StyledButton>Nuevo Video</StyledButton>
+    <StyledButton 
+        backgroundColor="rgba(0, 0, 0, 0.9)"
+        borderColor="#f5f5f5">Nuevo Video</StyledButton>
     </StyledHeader>
 }
 
