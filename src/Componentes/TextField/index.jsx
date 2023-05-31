@@ -1,33 +1,22 @@
 import React from 'react';
+import TextField from '@mui/material/TextField';
 
-const TextField = ({ label, value, onChange }) => {
+const CampoTexto = ({ id, label, variant, background, color, type  }) => {
   return (
-    <div>
-      <label>{label}</label>
-      <input type="text" value={value} onChange={onChange} />
-    </div>
+    <TextField 
+      id={id} 
+      label={label} 
+      variant={variant} 
+      background={background} 
+      color={color} 
+      fullWidth 
+      required 
+      InputLabelProps={{style: { color: '#f5f5f5'}}}
+      InputProps={{sx: { backgroundColor: '#53585D' },
+        type: type,
+      }}
+    />
   );
 };
 
-const Form = () => {
-  const formFields = [
-    { label: 'Nombre', value: '', onChange: (e) => console.log(e.target.value) },
-    { label: 'Correo electrónico', value: '', onChange: (e) => console.log(e.target.value) },
-    // Agrega más campos aquí según tus necesidades
-  ];
-
-  return (
-    <form>
-      {formFields.map((field, index) => (
-        <TextField
-          key={index}
-          label={field.label}
-          value={field.value}
-          onChange={field.onChange}
-        />
-      ))}
-    </form>
-  );
-};
-
-export default Form;
+export default CampoTexto;
